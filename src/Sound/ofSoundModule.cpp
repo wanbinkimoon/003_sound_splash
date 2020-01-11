@@ -32,7 +32,7 @@ void ofSoundModule::setup(){
   audioPanelTWO->loadTheme("themes/three.json", true);
   audioPanelTWO->setPosition(audioPanelONE->getShape().getTopRight() + ofPoint(20,0));
   audioContTWO = audioPanelTWO->addContainer("", ofJson({{"direction", "vertical"}}));
-  audioContTWO->add(centroid.set("centroid", 0, -1, 1), ofJson({{"width", SLIDER_WIDTH_H}, {"height", SLIDER_HEIGHT_H}}));
+  audioContTWO->add(centroid.set("centroid", 0, 0, 1), ofJson({{"width", SLIDER_WIDTH_H}, {"height", SLIDER_HEIGHT_H}}));
   audioContTWO->add<ofxGuiValuePlotter>(power.set("power", 0.0, 0.0, 1.0), ofJson({{"precision", 2}, {"width", SLIDER_WIDTH_H}, {"height", SLIDER_HEIGHT_H}}));
   
   ofBackground(10);

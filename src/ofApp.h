@@ -11,6 +11,7 @@
 #include "ofMidiModule.h"
 #include "ofSoundModule.h"
 #include "ofColorModule.h"
+#include "ofxAudioAnalyzer.h"
 
 class ofApp : public ofBaseApp{
   
@@ -31,7 +32,9 @@ public:
   void dragEvent(ofDragInfo dragInfo);
   void gotMessage(ofMessage msg);
   
-  ofShader shader;
+  ofShader shader_back;
+  ofShader shader_black;
+  ofShader shader_grad;
   
   shared_ptr<ofMidiModule> midi;
   shared_ptr<ofSoundModule> sound;

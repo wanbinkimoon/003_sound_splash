@@ -3,12 +3,15 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
   ofSetDataPathRoot("../Resources/data/");
-
-  shader_back.load("shader/background/shader");
-  shader_black.load("shader/black/shader");
-  shader_grad.load("shader/grad/shader");
   
   ofBackground(0);
+  
+  shader_back_1.load("shader/background_1/shader");
+  shader_back_2.load("shader/background_2/shader");
+  shader_back_3.load("shader/background_1/shader");
+  shader_back_4.load("shader/background_2/shader");
+  shader_black.load("shader/black/shader");
+  shader_grad.load("shader/grad/shader");
 }
 
 //--------------------------------------------------------------
@@ -18,40 +21,15 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-  
-  shader_back.begin();
-  shader_back.setUniform1f("u_time", ofGetElapsedTimef());
-  shader_back.setUniform2f("u_resolution", ofGetWidth(), ofGetHeight());
-  shader_back.setUniform1f("u_sound", sound->centroid);
-  ofFill();
-  ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
-  shader_back.end();
-  
-  int side = 200;
-  int maxZ = 600;
-  ofNoFill(); ofSetColor(255);
-  ofDrawRectangle(
-                  ofGetWidth() * .5 - side + side * .1 + 1,
-                  ofGetHeight() * .5 - side + side * .1 + 1,
-                  side * 2 - side * .2 - 2,
-                  side * 2 - side * .2 - 2);
+  if(sound->bands.size() < 1) return;
   
   
-  shader_black.begin();
-  ofFill();
-  ofDrawBox(ofGetWidth() * .5 - side  * .5 - side * .1, ofGetHeight() * .5 - side * .5 - side * .1, ofMap(sound->bands[1], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[1], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 + side  * .5 + side * .1, ofGetHeight() * .5 - side * .5 - side * .1, ofMap(sound->bands[2], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[2], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 - side  * .5 - side * .1, ofGetHeight() * .5 + side * .5 + side * .1, ofMap(sound->bands[4], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[4], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 + side  * .5 + side * .1, ofGetHeight() * .5 + side * .5 + side * .1, ofMap(sound->bands[6], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[6], 0, 1, -maxZ, maxZ));
-  shader_black.end();
+  if(midi->padsONE[0]) ofApp::background_1();
+  if(midi->padsONE[1]) ofApp::background_2();
+  if(midi->padsONE[2]) ofApp::background_3();
+  if(midi->padsONE[3]) ofApp::background_4();
   
-  shader_grad.begin();
-  ofNoFill(); ofSetColor(255);
-  ofDrawBox(ofGetWidth() * .5 - side  * .5 - side * .1, ofGetHeight() * .5 - side * .5 - side * .1, ofMap(sound->bands[1], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[1], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 + side  * .5 + side * .1, ofGetHeight() * .5 - side * .5 - side * .1, ofMap(sound->bands[2], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[2], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 - side  * .5 - side * .1, ofGetHeight() * .5 + side * .5 + side * .1, ofMap(sound->bands[4], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[4], 0, 1, -maxZ, maxZ));
-  ofDrawBox(ofGetWidth() * .5 + side  * .5 + side * .1, ofGetHeight() * .5 + side * .5 + side * .1, ofMap(sound->bands[6], 0, 1, -maxZ, maxZ) * .5, side, side, side * 2 + ofMap(sound->bands[6], 0, 1, -maxZ, maxZ));
-  shader_grad.end();
+  if(midi->padsTWO[0]) ofApp::boxes();
 }
 
 //--------------------------------------------------------------

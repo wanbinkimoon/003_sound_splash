@@ -48,6 +48,8 @@
 		96D881793A465B099189E933 /* ofxGuiZoomableGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8442D8A7A7F11B5548BE3FB1 /* ofxGuiZoomableGraphics.cpp */; };
 		98355E578D9CCEE106FBC6EC /* ofSoundPlayerExtended.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 685B7F94AF6DEF04EB1C9E20 /* ofSoundPlayerExtended.cpp */; };
 		99F16F2A321EE7D61BECB346 /* ofPublicScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F34C3158589B45C6D85BEA /* ofPublicScreen.cpp */; };
+		9A69BB0D23CA60B0009DD388 /* ofBoxModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */; };
+		9A69BB0F23CA6260009DD388 /* ofApp_modules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A69BB0E23CA6260009DD388 /* ofApp_modules.cpp */; };
 		9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1B275EC347E41C380E1179 /* OpenAL.framework */; };
 		BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F634AA6CA2E3C60F3B87B59A /* ofxRtMidiIn.cpp */; };
 		C31128357EC93B5C5D423D13 /* ofColorModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C216016ADAE41BD3A468B49 /* ofColorModule.cpp */; };
@@ -206,12 +208,21 @@
 		961DA6D7EB335ED3B790C361 /* vectorinput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vectorinput.h; path = ../../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/vectorinput.h; sourceTree = SOURCE_ROOT; };
 		97E50D4D46A31EDC1439DCD0 /* ofxAudioAnalyzer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxAudioAnalyzer.cpp; path = ../../../addons/ofxAudioAnalyzer/src/ofxAudioAnalyzer.cpp; sourceTree = SOURCE_ROOT; };
 		9852ABB5E21EBF315E8EB616 /* tnt_fortran_array2d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tnt_fortran_array2d.h; path = ../../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array2d.h; sourceTree = SOURCE_ROOT; };
-		9A69BB0323CA5E9A009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
-		9A69BB0423CA5E9A009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
 		9A69BB0623CA5E9A009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		9A69BB0723CA5E9A009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
 		9A69BB0923CA5E9A009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		9A69BB0A23CA5E9A009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofBoxModule.cpp; path = Objects/ofBoxModule.cpp; sourceTree = "<group>"; };
+		9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ofBoxModule.hpp; path = Objects/ofBoxModule.hpp; sourceTree = "<group>"; };
+		9A69BB0E23CA6260009DD388 /* ofApp_modules.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp_modules.cpp; sourceTree = "<group>"; };
+		9A69BB1123CA6C40009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
+		9A69BB1223CA6C40009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		9A69BB1423CA6C40009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
+		9A69BB1523CA6C40009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		9A69BB1723CA6C40009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
+		9A69BB1823CA6C40009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		9A69BB1A23CA6C40009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
+		9A69BB1B23CA6C40009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
 		9C216016ADAE41BD3A468B49 /* ofColorModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofColorModule.cpp; path = src/Color/ofColorModule.cpp; sourceTree = SOURCE_ROOT; };
 		9D55C918270CC85C38C61140 /* graphutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = graphutils.h; path = ../../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler/graphutils.h; sourceTree = SOURCE_ROOT; };
 		9FA6FA14390B836B8CCC3A40 /* ofxGuiContainer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxGuiContainer.cpp; path = ../../../addons/ofxGuiExtended/src/containers/ofxGuiContainer.cpp; sourceTree = SOURCE_ROOT; };
@@ -745,22 +756,16 @@
 		9A69BB0123CA5E9A009DD388 /* shader */ = {
 			isa = PBXGroup;
 			children = (
-				9A69BB0223CA5E9A009DD388 /* background */,
+				9A69BB1923CA6C40009DD388 /* background_1 */,
+				9A69BB1323CA6C40009DD388 /* background_2 */,
+				9A69BB1023CA6C40009DD388 /* bakcground_3 */,
+				9A69BB1623CA6C40009DD388 /* bakcground_4 */,
 				9A69BB0523CA5E9A009DD388 /* grad */,
 				9A69BB0823CA5E9A009DD388 /* black */,
 			);
 			name = shader;
 			path = bin/data/shader;
 			sourceTree = SOURCE_ROOT;
-		};
-		9A69BB0223CA5E9A009DD388 /* background */ = {
-			isa = PBXGroup;
-			children = (
-				9A69BB0323CA5E9A009DD388 /* shader.vert */,
-				9A69BB0423CA5E9A009DD388 /* shader.frag */,
-			);
-			path = background;
-			sourceTree = "<group>";
 		};
 		9A69BB0523CA5E9A009DD388 /* grad */ = {
 			isa = PBXGroup;
@@ -778,6 +783,42 @@
 				9A69BB0A23CA5E9A009DD388 /* shader.frag */,
 			);
 			path = black;
+			sourceTree = "<group>";
+		};
+		9A69BB1023CA6C40009DD388 /* bakcground_3 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69BB1123CA6C40009DD388 /* shader.vert */,
+				9A69BB1223CA6C40009DD388 /* shader.frag */,
+			);
+			path = bakcground_3;
+			sourceTree = "<group>";
+		};
+		9A69BB1323CA6C40009DD388 /* background_2 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69BB1423CA6C40009DD388 /* shader.vert */,
+				9A69BB1523CA6C40009DD388 /* shader.frag */,
+			);
+			path = background_2;
+			sourceTree = "<group>";
+		};
+		9A69BB1623CA6C40009DD388 /* bakcground_4 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69BB1723CA6C40009DD388 /* shader.vert */,
+				9A69BB1823CA6C40009DD388 /* shader.frag */,
+			);
+			path = bakcground_4;
+			sourceTree = "<group>";
+		};
+		9A69BB1923CA6C40009DD388 /* background_1 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69BB1A23CA6C40009DD388 /* shader.vert */,
+				9A69BB1B23CA6C40009DD388 /* shader.frag */,
+			);
+			path = background_1;
 			sourceTree = "<group>";
 		};
 		9CBF51184BE294FD9D73043F /* src */ = {
@@ -1289,6 +1330,9 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				9A69BB0E23CA6260009DD388 /* ofApp_modules.cpp */,
+				9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */,
+				9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */,
 				97E7B3B2A5CC47281D6682BE /* Public Screen */,
 				614687C9665C6CD8098D06A4 /* Midi */,
 				AA6060B59FF88D4235768522 /* Color */,
@@ -1481,7 +1525,9 @@
 				6E22DD7AA6893113E1F2DF07 /* ofxAAMultiPitchKlapuriAlgorithm.cpp in Sources */,
 				866AC116016D40F86DCB4510 /* ofxAAOnsetsAlgorithm.cpp in Sources */,
 				1D397CC89DDD782F892B7483 /* ofxAudioAnalyzer.cpp in Sources */,
+				9A69BB0D23CA60B0009DD388 /* ofBoxModule.cpp in Sources */,
 				3CA17DE70B38CA2592D51E7D /* ofxAudioAnalyzerAlgorithms.cpp in Sources */,
+				9A69BB0F23CA6260009DD388 /* ofApp_modules.cpp in Sources */,
 				2302BCF25C1D2BBFE43ADCE6 /* ofxAudioAnalyzerUnit.cpp in Sources */,
 				477F449F6256389CCDB36FFC /* audiodecoderbase.cpp in Sources */,
 				2761F96388F64FE596863183 /* audiodecodercoreaudio.cpp in Sources */,

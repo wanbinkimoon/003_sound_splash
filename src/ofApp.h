@@ -32,7 +32,20 @@ public:
   void dragEvent(ofDragInfo dragInfo);
   void gotMessage(ofMessage msg);
   
-  ofShader shader_back;
+  void background_1();
+  void background_2();
+  void background_3();
+  void background_4();
+  
+  void boxes();
+  void stars();
+  
+  ofShader shader_back_1;
+  ofShader shader_back_2;
+  ofShader shader_back_3;
+  ofShader shader_back_4;
+  
+  
   ofShader shader_black;
   ofShader shader_grad;
   

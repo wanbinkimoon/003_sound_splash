@@ -63,4 +63,7 @@ public:
   
   int interval = 100;
   int maxSquares = 40;
+  
+  int rowsGrid = 1;
+  int colsGrid = 1;
 };

@@ -67,25 +67,32 @@ void ofApp::boxes(){
                   side * 2 - side * .2 - 2,
                   side * 2 - side * .2 - 2);
   
-  int rows = ofMap(midi->knobsTWO[1], 0, 100, 1, 21);
-  int cols = ofMap(midi->knobsTWO[9], 0, 100, 1, 21);
-  for(unsigned int x = 1; x < rows; x+=2){
-    for(unsigned int y = 1; y < cols; y+=2){
+  rowsGrid = ofMap(midi->knobsTWO[1], 0, 100, 1, 21);
+  colsGrid = ofMap(midi->knobsTWO[9], 0, 100, 1, 21);
+  
+  maxSquares = rowsGrid * colsGrid * 20;
+  for(unsigned int x = 1; x < rowsGrid; x+=2){
+    for(unsigned int y = 1; y < colsGrid; y+=2){
       
-      float xB = ofGetWidth() * .5 + side * x - (rows / 2 * side);
-      float yB = ofGetHeight() * .5 + side * y - (cols / 2 * side);
-      float zB = ofMap(sound->bands[x + y * cols % sound->bands.size()], 0, 1, -maxZ, maxZ) * .5;
+      float xB = ofGetWidth() * .5 + (side * .5 + side * .1) * x - (rowsGrid / 2 * (side * .5 + side * .1));
+      float yB = ofGetHeight() * .5 +  (side * .5 + side * .1)  * y - (colsGrid / 2 * (side * .5 + side * .1));
+      float zB = ofMap(sound->bands[x + y * colsGrid % sound->bands.size() -1 ], 0, 1, -maxZ, maxZ) * .5;
       
       if(midi->padsTWO[2]) ofApp::tunnel(xB, yB);
       
       if(midi->padsTWO[1]) {
         shader_black.begin();
         ofFill();
-        ofDrawBox(xB, yB, zB, side, side, side * 2 + ofMap(sound->bands[x + y * rows % 24], 0, 1, -maxZ, maxZ));
+        ofDrawBox(xB, yB, zB, side, side, side * 2 + ofMap(sound->bands[x + y * rowsGrid % 24], 0, 1, 20, 200));
         shader_black.end();
       }
       
       shader_grad.begin();
+      shader_grad.setUniform3f("u_color_1",
+                                 ofMap(color->palette[2]->r, 0, 255, 0, 1),
+                                 ofMap(color->palette[2]->g, 0, 255, 0, 1),
+                                 ofMap(color->palette[2]->b, 0, 255, 0, 1)
+                                 );
       ofNoFill(); ofSetColor(255);
       ofDrawBox(xB, yB, zB, side, side, side * 2 + ofMap(sound->bands[1], 0, 1, -maxZ, maxZ));
       shader_grad.end();

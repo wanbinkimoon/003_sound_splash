@@ -8,10 +8,10 @@
 #include <stdio.h>
 #include "ofColorModule.h"
 void ofColorModule::labelizer(){
-  paletteLabel[0] = "BACKGROUND";
-  paletteLabel[1] = "CICLE - 1";
-  paletteLabel[2] = "CICLE - 2";
-  paletteLabel[3] = "COL - 4";
+  paletteLabel[0] = "SMOKE ONE";
+  paletteLabel[1] = "SMOKE TWO";
+  paletteLabel[2] = "TUNNEL";
+  paletteLabel[3] = "BACKGROUND";
   paletteLabel[4] = "COL - 5";
   paletteLabel[5] = "COL - 6";
   paletteLabel[6] = "COL - 7";

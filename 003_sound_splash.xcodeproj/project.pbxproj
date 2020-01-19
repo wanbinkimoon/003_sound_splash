@@ -212,8 +212,8 @@
 		9A69BB0723CA5E9A009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
 		9A69BB0923CA5E9A009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		9A69BB0A23CA5E9A009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
-		9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofBoxModule.cpp; path = Objects/ofBoxModule.cpp; sourceTree = "<group>"; };
-		9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ofBoxModule.hpp; path = Objects/ofBoxModule.hpp; sourceTree = "<group>"; };
+		9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofBoxModule.cpp; sourceTree = "<group>"; };
+		9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ofBoxModule.hpp; sourceTree = "<group>"; };
 		9A69BB0E23CA6260009DD388 /* ofApp_modules.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp_modules.cpp; sourceTree = "<group>"; };
 		9A69BB1123CA6C40009DD388 /* shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		9A69BB1223CA6C40009DD388 /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
@@ -821,6 +821,15 @@
 			path = background_1;
 			sourceTree = "<group>";
 		};
+		9AB063B823D4C47200E66968 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */,
+				9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
 		9CBF51184BE294FD9D73043F /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -1331,8 +1340,7 @@
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				9A69BB0E23CA6260009DD388 /* ofApp_modules.cpp */,
-				9A69BB0B23CA60B0009DD388 /* ofBoxModule.cpp */,
-				9A69BB0C23CA60B0009DD388 /* ofBoxModule.hpp */,
+				9AB063B823D4C47200E66968 /* classes */,
 				97E7B3B2A5CC47281D6682BE /* Public Screen */,
 				614687C9665C6CD8098D06A4 /* Midi */,
 				AA6060B59FF88D4235768522 /* Color */,

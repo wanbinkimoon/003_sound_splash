@@ -15,6 +15,7 @@ void ofMidiModule::labelizer(){
   knobsONELabel[4] = "Knob - 5";
   knobsONELabel[5] = "Knob - 6";
   knobsONELabel[6] = "Knob - 7";
+  
   knobsONELabel[7] = "Knob - 8";
   knobsONELabel[8] = "Knob - 9";
   knobsONELabel[9] = "Knob - 10";
@@ -25,8 +26,8 @@ void ofMidiModule::labelizer(){
   knobsONELabel[14] = "Knob - 15";
   knobsONELabel[15] = "Knob - 16";
   
-  padsONELabel[0] = "Pad - 1";
-  padsONELabel[1] = "Pad - 2";
+  padsONELabel[0] = "SMOKE ONE";
+  padsONELabel[1] = "SMOKE TWO";
   padsONELabel[2] = "Pad - 3";
   padsONELabel[3] = "Pad - 4";
   padsONELabel[4] = "Pad - 5";
@@ -36,15 +37,16 @@ void ofMidiModule::labelizer(){
   
   //   ----------------------------------------------------
   
-  knobsTWOLabel[0] = "Knob - 1";
+  knobsTWOLabel[0] = "CUBE SIDE";
   knobsTWOLabel[1] = "Knob - 2";
-  knobsTWOLabel[2] = "Knob - 3";
+  knobsTWOLabel[2] = "TUNNEL INT";
   knobsTWOLabel[3] = "Knob - 4";
   knobsTWOLabel[4] = "Knob - 5";
   knobsTWOLabel[5] = "Knob - 6";
   knobsTWOLabel[6] = "Knob - 7";
   knobsTWOLabel[7] = "Knob - 8";
-  knobsTWOLabel[8] = "Knob - 9";
+  
+  knobsTWOLabel[8] = "CUBE DEPTH";
   knobsTWOLabel[9] = "Knob - 10";
   knobsTWOLabel[10] = "Knob - 11";
   knobsTWOLabel[11] = "Knob - 12";
@@ -53,9 +55,9 @@ void ofMidiModule::labelizer(){
   knobsTWOLabel[14] = "Knob - 15";
   knobsTWOLabel[15] = "Knob - 16";
   
-  padsTWOLabel[0] = "Pad - 1";
-  padsTWOLabel[1] = "Pad - 2";
-  padsTWOLabel[2] = "Pad - 3";
+  padsTWOLabel[0] = "CUBES";
+  padsTWOLabel[1] = "CUBE FILL";
+  padsTWOLabel[2] = "TUNNEL";
   padsTWOLabel[3] = "Pad - 4";
   padsTWOLabel[4] = "Pad - 5";
   padsTWOLabel[5] = "Pad - 6";

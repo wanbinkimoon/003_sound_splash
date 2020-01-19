@@ -1011,4 +1011,5 @@ dependencies: \
   ../../../addons/ofxAudioAnalyzer/src/ofxAudioAnalyzerAlgorithms.h \
   ../../../addons/ofxAudioAnalyzer/src/ofxAAMultiPitchKlapuriAlgorithm.h \
   ../../../addons/ofxAudioAnalyzer/src/ofxAAOnsetsAlgorithm.h \
-  /Users/nicolabertelloni/Developer/of_v0.11.0_osx/apps/visual/003_sound_splash/src/Color/ofColorModule.h
+  /Users/nicolabertelloni/Developer/of_v0.11.0_osx/apps/visual/003_sound_splash/src/Color/ofColorModule.h \
+  src/ofBoxModule.hpp

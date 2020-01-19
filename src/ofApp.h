@@ -12,6 +12,7 @@
 #include "ofSoundModule.h"
 #include "ofColorModule.h"
 #include "ofxAudioAnalyzer.h"
+#include "ofBoxModule.hpp"
 
 class ofApp : public ofBaseApp{
   
@@ -39,6 +40,7 @@ public:
   
   void boxes();
   void stars();
+  void tunnel(float x, float y);
   
   ofShader shader_back_1;
   ofShader shader_back_2;
@@ -53,4 +55,12 @@ public:
   shared_ptr<ofSoundModule> sound;
   shared_ptr<ofColorModule> color;
   bool FULLSCREEN;
+  
+  int side = 0;
+  int maxZ = 0;
+  
+  vector <ofVec2f> squaresData;
+  
+  int interval = 100;
+  int maxSquares = 40;
 };
